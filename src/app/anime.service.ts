@@ -12,8 +12,9 @@ export class AnimeService {
   getanimeList(){
     return this.http.get<anime[]>(`https://650ea65d54d18aabfe9955f8.mockapi.io/anime`);
   }
-  // AddAnime(anime:anime){
-  //   return this.http.post(`https://650ea65d54d18aabfe9955f8.mockapi.io/anime`,anime)
-  // }
+
+  addAnimeList(anime:anime){
+    return this.http.post(`https://650ea65d54d18aabfe9955f8.mockapi.io/anime`,anime)
+  }
 
 }

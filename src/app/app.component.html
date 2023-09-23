@@ -1,10 +1,10 @@
-<body>
-  <header>
-    <mat-toolbar color="primary">
+<header>
+  <nav>
+    <mat-toolbar class="navigate" color="warn">
       <button mat-button routerLink="/home">Home</button>
-      <button mat-button routerLink="/anime">Movies</button>
-      <!-- <button mat-button routerLink="/movies/add">Add Movies</button> -->
+      <button mat-button routerLink="/anime">Animes</button>
+      <button mat-button routerLink="/anime/add">Add Animes</button>
     </mat-toolbar>
-  </header>
-  <router-outlet></router-outlet>
-</body>
+  </nav>
+</header>
+<router-outlet></router-outlet>

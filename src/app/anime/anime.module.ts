@@ -7,16 +7,21 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AnimeListComponent } from './anime-list/anime-list.component';
+import { AddAnimeComponent } from './add-anime/add-anime.component';
+import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
+import { MatListModule } from '@angular/material/list';
+import { MatOptionModule } from '@angular/material/core';
 
 
 @NgModule({
   declarations: [
     AnimePosterComponent,
     AnimeListComponent,
+    AddAnimeComponent,
     
   ],
   imports: [
@@ -30,8 +35,10 @@ import { AnimeListComponent } from './anime-list/anime-list.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
-    
+    MatIconModule,
+    MatRadioModule,
+    MatListModule,
+    MatOptionModule
   ]
 })
 export class AnimeModule { }
