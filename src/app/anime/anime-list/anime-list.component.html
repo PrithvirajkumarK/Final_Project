@@ -1,6 +1,7 @@
 <section class="movie-containers">
   <app-anime-poster
     *ngFor="let anime of animeList"
-    [Anime]="anime"
+    [anime]="anime"
+    (removeMovie)="loadAnimeData()"
   ></app-anime-poster>
 </section>

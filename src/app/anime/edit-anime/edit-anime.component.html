@@ -1,6 +1,6 @@
 <section class="input-container">
-  <form [formGroup]="animeForm" (ngSubmit)="addanime()" class="main-container">
-    <p>Add New Animes</p>
+  <p>Add New Animes🎉😊</p>
+  <form [formGroup]="animeForm" (ngSubmit)="editanime()" class="main-container">
     <mat-form-field>
       <mat-label>Movie-Name</mat-label>
       <input matInput formControlName="title" placeholder="Ex. Name" />
@@ -56,31 +56,31 @@
     </mat-radio-group>
 
     <!-- <mat-form-field>
-      <mat-label>Genres</mat-label>
-      <mat-select formControlName="genres" multiple>
-        <mat-option *ngFor="let genre of genres" [value]="genre.value">{{
-          genre.label
-        }}</mat-option>
-      </mat-select>
-    </mat-form-field> -->
+        <mat-label>Genres</mat-label>
+        <mat-select formControlName="genres" multiple>
+          <mat-option *ngFor="let genre of genres" [value]="genre.value">{{
+            genre.label
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field> -->
 
     <!-- <h3>Languages</h3>
-    <mat-selection-list formControlName="languages" multiple>
-      <mat-list-option *ngFor="let lang of languages" [value]="lang.value">{{
-        lang.label
-      }}</mat-list-option>
-    </mat-selection-list> -->
+      <mat-selection-list formControlName="languages" multiple>
+        <mat-list-option *ngFor="let lang of languages" [value]="lang.value">{{
+          lang.label
+        }}</mat-list-option>
+      </mat-selection-list> -->
     <!-- <mat-form-field>
-      <mat-label> <mat-icon>translate</mat-icon> Languages</mat-label>
-
-      <mat-select formControlName="languages" multiple>
-        <mat-option
-          *ngFor="let language of languages"
-          [value]="language.value"
-          >{{ language.label }}</mat-option
-        >
-      </mat-select>
-    </mat-form-field> -->
+        <mat-label> <mat-icon>translate</mat-icon> Languages</mat-label>
+  
+        <mat-select formControlName="languages" multiple>
+          <mat-option
+            *ngFor="let language of languages"
+            [value]="language.value"
+            >{{ language.label }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field> -->
 
     <mat-form-field>
       <mat-label>Movie-Description</mat-label>
@@ -118,7 +118,7 @@
         aria-label="Example home icon"
         fontIcon="add"
       ></mat-icon>
-      {{ "Add Anime" | uppercase }}
+      {{ "Save" | uppercase }}
     </button>
   </form>
 </section>

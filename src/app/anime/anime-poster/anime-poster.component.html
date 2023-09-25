@@ -1,48 +1,59 @@
 <div class="movie-container">
-  <img [src]="Anime.poster" [alt]="Anime.title" class="movie-poster" />
+  <img [src]="anime.poster" [alt]="anime.title" class="movie-poster" />
   <div class="movie-details">
     <div class="movie-spec">
       <h2 class="movie-name">
-        {{ Anime.title }}
-        <!-- <button
-                (click)="toggle()"
-                mat-icon-button
-                color="primary"
-                aria-label="Toggle Summary"
-              > -->
-        <!-- <mat-icon *ngIf="value; else moreIcon">expand_less</mat-icon>
-                <ng-template #moreIcon>
-                  <mat-icon>expand_more</mat-icon>
-                </ng-template>
-              </button>
-       -->
-        <!-- <button
-                (click)="gotoMovieDetail()"
-                mat-icon-button
-                color="primary"
-                aria-label="Toggle Summary"
-              >
-                <mat-icon>info</mat-icon>
-              </button> -->
+        {{ anime.title }}
+        <button
+          class="click"
+          (click)="lesssummary()"
+          mat-icon-button
+          color="primary"
+          aria-label="Expand summary"
+        >
+          <mat-icon *ngIf="show">expand_less</mat-icon>
+          <mat-icon *ngIf="!show">expand_more</mat-icon>
+        </button>
+        <button
+          (click)="getdetails()"
+          mat-icon-button
+          color="primary"
+          aria-label="Toggle Summary"
+        >
+          <mat-icon>info</mat-icon>
+        </button>
       </h2>
-      <p class="movie-rating">⭐{{ Anime.rating }}</p>
+      <p class="movie-rating">⭐{{ anime.rating }}</p>
     </div>
-
-    <p class="movie-summary">
-      {{ Anime.summary }}
+    <p>{{ anime.cast?.join(" | ") }}</p>
+    <p>{{ anime.genres?.join(" | ") }}</p>
+    <p>{{ anime.languages?.join(" | ") }}</p>
+    <p *ngIf="show" class="movie-summary">
+      {{ anime.summary }}
     </p>
-    <!-- <app-likecomponent
-            [likeCount]="movie.like"
-            [disLikeCount]="movie.dislike"
-            (updateLike)="updateLike($event)"
-            (updateDislike)="updateDislike($event)"
-          ></app-likecomponent> -->
-    <button mat-icon-button color="accent" aria-label="Edit Movie">
-      <mat-icon>edit</mat-icon>
-    </button>
 
-    <button mat-icon-button color="warn" aria-label="Delete Movie">
-      <mat-icon>delete</mat-icon>
-    </button>
+    <div class="button-section">
+      <div class="like">
+        <app-like-dislike
+          [like]="anime.like"
+          [dislike]="anime.dislike"
+          (likeCount)="updateLikecount($event)"
+          (disLikecount)="updatedisLikecount($event)"
+        ></app-like-dislike>
+      </div>
+      <div class="crud">
+        <button (click)="editmovie()" mat-icon-button color="" aria-label="">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          (click)="deleteMovie()"
+          mat-icon-button
+          color="warn"
+          aria-label=""
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
   </div>
 </div>

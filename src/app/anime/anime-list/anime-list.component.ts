@@ -17,7 +17,10 @@ constructor(private animeservice:AnimeService){}
 
 ngOnInit(){
 // this.LoadData();
-this.getanimeList=this.animeservice.getanimeList().
+this.loadAnimeData()
+}
+loadAnimeData(){
+  this.getanimeList=this.animeservice.getanimeList().
   subscribe((Anime)=>
   {this.animeList=Anime;
   });

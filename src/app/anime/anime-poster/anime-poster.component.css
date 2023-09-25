@@ -14,8 +14,8 @@
   width: 400px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-top: 1rem;
 }
 
 .movie-poster {
@@ -46,4 +46,57 @@
 
 .movie-details {
   padding: 1rem;
+}
+
+
+section{
+  background-color: white;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  width: 400px;
+  height: 100%;
+}
+img{
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+  margin: 0 auto;
+  text-align: center;
+} 
+.description{
+  transition: all 1s;
+  color: hsla(44, 31%, 39%, 0.763);
+  position: relative;
+}
+.title p{
+  font-weight: 700;
+}
+.title{
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin: 0 auto;
+}
+
+/* .like{
+  display: flex;
+  padding-left: 25px;
+  gap: 20px;
+  padding-bottom: 5px;
+} */
+/* button{
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+} */
+.button-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

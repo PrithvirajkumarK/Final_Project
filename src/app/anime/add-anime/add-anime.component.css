@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     background-color: hsl(0, 0%, 100%);
-    border: 2px solid hsl(0, 39%, 54%);
+    border: 2px solid hsl(260, 2%, 24%);
     width: 300px;
     padding: 2%;
     margin: 0 auto;
@@ -19,45 +19,12 @@
     overflow: hidden;
   }
   
-  .input-container p{
-    text-align: right;
   
-    /* animation properties */
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    
-    -moz-animation: my-animation 10s linear infinite;
-    -webkit-animation: my-animation 10s linear infinite;
-    animation: my-animation 10s linear infinite;
-  }
-  
-  /* for Firefox */
-  @-moz-keyframes my-animation {
-    from { -moz-transform: translateX(-100%); }
-    to { -moz-transform: translateX(100%); }
-  }
-  
-  /* for Chrome */
-  @-webkit-keyframes my-animation {
-    from { -webkit-transform: translateX(-100%); }
-    to { -webkit-transform: translateX(100%); }
-  }
-  
-  @keyframes my-animation {
-    from {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-    to {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-  }
   p{
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 25px;
     font-weight: 500;
     font-size:2rem;
+    padding-bottom: 10px;
   }

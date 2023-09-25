@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 type anime={
   id:string
-  name:string
+  title:string
   poster:string
   summary:string
-  trainer:string
+  trailer:string
 }
 @Component({
   selector: 'app-root',

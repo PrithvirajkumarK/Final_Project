@@ -1,9 +1,37 @@
-<header>
+<!-- <header>
   <nav>
-    <mat-toolbar class="navigate" color="warn">
+    <mat-toolbar class="navigate" color="primary">
       <button mat-button routerLink="/home">Home</button>
       <button mat-button routerLink="/anime">Animes</button>
       <button mat-button routerLink="/anime/add">Add Animes</button>
+    </mat-toolbar>
+  </nav>
+</header> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<header>
+  <nav>
+    <mat-toolbar class="toolbar">
+      <div class="tool">
+        <mat-icon>movie</mat-icon>
+        <span>Anime App</span>
+      </div>
+      <div class="nav">
+        <button mat-button routerLink="/home">
+          <mat-icon>home</mat-icon>Home
+        </button>
+        <button mat-button routerLink="/anime">
+          <i class="fa-solid fa-film"></i> Animes
+        </button>
+        <button mat-button routerLink="/anime/add">
+          <mat-icon>add</mat-icon>Add Animes
+        </button>
+      </div>
     </mat-toolbar>
   </nav>
 </header>
