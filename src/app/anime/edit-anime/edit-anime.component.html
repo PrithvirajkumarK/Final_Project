@@ -1,6 +1,6 @@
 <section class="input-container">
-  <p>Add New Animes🎉😊</p>
   <form [formGroup]="animeForm" (ngSubmit)="editanime()" class="main-container">
+    <p>Edit Animes</p>
     <mat-form-field>
       <mat-label>Movie-Name</mat-label>
       <input matInput formControlName="title" placeholder="Ex. Name" />
@@ -55,32 +55,26 @@
       <mat-radio-button value="R">R</mat-radio-button>
     </mat-radio-group>
 
-    <!-- <mat-form-field>
-        <mat-label>Genres</mat-label>
-        <mat-select formControlName="genres" multiple>
-          <mat-option *ngFor="let genre of genres" [value]="genre.value">{{
-            genre.label
-          }}</mat-option>
-        </mat-select>
-      </mat-form-field> -->
+    <mat-form-field>
+      <mat-label>Genres</mat-label>
+      <mat-select formControlName="genres" multiple>
+        <mat-option *ngFor="let genre of genres" [value]="genre.value">{{
+          genre.label
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-    <!-- <h3>Languages</h3>
-      <mat-selection-list formControlName="languages" multiple>
-        <mat-list-option *ngFor="let lang of languages" [value]="lang.value">{{
-          lang.label
-        }}</mat-list-option>
-      </mat-selection-list> -->
-    <!-- <mat-form-field>
-        <mat-label> <mat-icon>translate</mat-icon> Languages</mat-label>
-  
-        <mat-select formControlName="languages" multiple>
-          <mat-option
-            *ngFor="let language of languages"
-            [value]="language.value"
-            >{{ language.label }}</mat-option
-          >
-        </mat-select>
-      </mat-form-field> -->
+    <mat-form-field>
+      <mat-label> <mat-icon>translate</mat-icon> Languages</mat-label>
+
+      <mat-select formControlName="languages" multiple>
+        <mat-option
+          *ngFor="let language of languages"
+          [value]="language.value"
+          >{{ language.label }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
 
     <mat-form-field>
       <mat-label>Movie-Description</mat-label>

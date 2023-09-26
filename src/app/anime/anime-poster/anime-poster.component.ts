@@ -31,6 +31,7 @@ lesssummary(){
   value:boolean = true;
   LikeSubject = new Subject<number>();
   DislikeSubject = new Subject<number>();
+  
 constructor(private router:Router,private animeservice:AnimeService){
   this.LikeSubject.pipe(debounceTime(2000),
   switchMap(
@@ -46,7 +47,7 @@ constructor(private router:Router,private animeservice:AnimeService){
   })).subscribe();
 }
 getdetails(){
-  this.router.navigate(['/anime',this.anime.id])
+  this.router.navigate([`/anime${this.anime.id}`])
 }
 editmovie(){
   this.router.navigate(['/anime/edit', this.anime.id])

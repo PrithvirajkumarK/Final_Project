@@ -18,7 +18,7 @@ export class AddAnimeComponent {
   animeForm = this.fb.group({
     title: ['', [Validators.required, Validators.minLength(5)]],
     rating: [0, [Validators.required, Validators.min(1), Validators.max(10)]],
-    languages:[[]],
+    languages:[[" "]],
     poster: [
       '',
       [
@@ -38,7 +38,7 @@ export class AddAnimeComponent {
     ],
     genres:[[]],
     censorRating:[],
-    
+    Releaseyear:[]
   });
   
   animeList;
@@ -67,7 +67,7 @@ export class AddAnimeComponent {
     const newmovie= this.animeForm.value
     if(this.animeForm.valid){
       this.animeservice.addAnimeList(newmovie as unknown as anime ).subscribe(() =>{ 
-        this.router.navigate(["/anime"])})
+        this.router.navigate(["/anime/"])})
   
       
       console.log(newmovie);

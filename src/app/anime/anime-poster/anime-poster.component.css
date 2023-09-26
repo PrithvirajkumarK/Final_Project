@@ -95,6 +95,11 @@ img{
   border: none;
   font-size: 20px;
 } */
+.about p{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .button-section{
   display: flex;
   justify-content: space-between;

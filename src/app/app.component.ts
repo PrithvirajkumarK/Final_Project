@@ -5,6 +5,11 @@ type anime={
   poster:string
   summary:string
   trailer:string
+  languages:Array<string>
+  genres:Array<string>
+  like:number
+  dislike:number
+  censorRating:string
 }
 @Component({
   selector: 'app-root',

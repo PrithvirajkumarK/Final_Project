@@ -12,14 +12,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AnimeListComponent } from './anime-list/anime-list.component';
 import { AddAnimeComponent } from './add-anime/add-anime.component';
+import { MatSelectionList } from '@angular/material/list';
+import { MatFormFieldControl } from '@angular/material/form-field';
 import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { MatOptionModule } from '@angular/material/core';
-import { MatFormFieldControl } from '@angular/material/form-field';
 import {MatBadgeModule} from '@angular/material/badge';
 import { EditAnimeComponent } from './edit-anime/edit-anime.component';
 import { AnimeDetailsComponent } from './anime-details/anime-details.component';
 import { LikeDislikeComponent } from './like-dislike/like-dislike.component';
+import{MatSelectModule } from '@angular/material/select'
 
 
 @NgModule({
@@ -41,14 +43,14 @@ import { LikeDislikeComponent } from './like-dislike/like-dislike.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
     MatInputModule,
+    MatFormFieldModule,
     MatIconModule,
     MatRadioModule,
     MatListModule,
     MatOptionModule,
-    MatBadgeModule
-    
+    MatBadgeModule,
+    MatSelectModule
   ]
 })
 export class AnimeModule { }

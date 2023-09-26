@@ -25,10 +25,18 @@
       </h2>
       <p class="movie-rating">⭐{{ anime.rating }}</p>
     </div>
-    <p>{{ anime.cast?.join(" | ") }}</p>
-    <p>{{ anime.genres?.join(" | ") }}</p>
-    <p>{{ anime.languages?.join(" | ") }}</p>
+    <div class="about">
+      <p>
+        <span>{{ anime.censorRating }}</span>
+      </p>
+      <p>{{ anime.cast?.join(" | ") }}</p>
+      <p><i class="fa-solid fa-hashtag"></i>{{ anime.genres?.join(" | ") }}</p>
+      <p>
+        <i class="fa-solid fa-language"></i>{{ anime.languages?.join(" | ") }}
+      </p>
+    </div>
     <p *ngIf="show" class="movie-summary">
+      <i class="fa-solid fa-bookmark" style="color: #fff700"></i>
       {{ anime.summary }}
     </p>
 

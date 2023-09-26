@@ -21,7 +21,7 @@ animeForm = this.fb.group({
   id:'',
   title: ['', [Validators.required, Validators.minLength(5)]],
   rating: [0, [Validators.required, Validators.min(1), Validators.max(10)]],
-  languages:[[]],
+  languages:[['']],
   poster: [
     '',
     [
@@ -39,8 +39,8 @@ animeForm = this.fb.group({
       Validators.pattern('^http.*'),
     ],
   ],
-  genres:[[]],
-  censorRating:[],
+  genres:[[""]],
+  censorRating:[""],
   
 });
 
@@ -48,13 +48,13 @@ constructor(private animeservice: AnimeService,private fb:FormBuilder,private ro
   const { id } = this.route.snapshot.params;
   this.id = id;
 }
-// ngOnInit() {
-//   this.animeservice
-//         .getanimeListById(this.id)
-//         .subscribe((mvList) => {
-//           this.animeForm.patchValue(mvList);
-//         });
-//     }
+ngOnInit() {
+  this.animeservice
+        .getanimeListById(this.id)
+        .subscribe((mvList) => {
+          this.animeForm.patchValue(mvList);
+        });
+    }
 
 get title() {
   return this.animeForm?.get('name');
@@ -76,8 +76,8 @@ get trailer() {
 editanime(){
   const newmovie= this.animeForm.value
   if(this.animeForm.valid){
-    this.animeservice.editAnimeList(newmovie as unknown as anime ).subscribe(() =>{ 
-      this.router.navigate(["/anime"])})
+    this.animeservice.editAnimeList(newmovie as anime).subscribe(() =>{ 
+      this.router.navigate(["/anime/"])})
 
     
     console.log(newmovie);
