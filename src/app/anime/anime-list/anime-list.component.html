@@ -1,4 +1,14 @@
+<form [formGroup]="searchForm" class="search-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search Books</mat-label>
+
+    <mat-icon matPrefix>search</mat-icon>
+
+    <input formControlName="search" type="text" matInput />
+  </mat-form-field>
+</form>
 <section class="movie-containers">
+  <mat-spinner *ngIf="isLoading" class="loader"></mat-spinner>
   <app-anime-poster
     *ngFor="let anime of animeList"
     [anime]="anime"

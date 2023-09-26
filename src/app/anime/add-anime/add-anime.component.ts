@@ -8,17 +8,16 @@ import { GENRES, LANGUAGES } from './global';
 @Component({
   selector: 'app-add-anime',
   templateUrl: './add-anime.component.html',
-  styleUrls: ['./add-anime.component.css']
+  styleUrls: ['./add-anime.component.css'],
 })
 export class AddAnimeComponent {
-
   languages = LANGUAGES;
 
-    genres = GENRES;
+  genres = GENRES;
   animeForm = this.fb.group({
     title: ['', [Validators.required, Validators.minLength(5)]],
     rating: [0, [Validators.required, Validators.min(1), Validators.max(10)]],
-    languages:[[" "]],
+    languages: [[' ']],
     poster: [
       '',
       [
@@ -36,16 +35,20 @@ export class AddAnimeComponent {
         Validators.pattern('^http.*'),
       ],
     ],
-    genres:[[]],
-    censorRating:[],
-    Releaseyear:[]
+    genres: [[]],
+    censorRating: [],
+    Releaseyear: [],
   });
-  
+
   animeList;
-  constructor(private animeservice: AnimeService,private fb:FormBuilder,private router:Router){
-    this.animeList= animeservice.animeList;
+  constructor(
+    private animeservice: AnimeService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {
+    this.animeList = animeservice.animeList;
   }
-  
+
   get title() {
     return this.animeForm?.get('name');
   }
@@ -61,15 +64,16 @@ export class AddAnimeComponent {
   get trailer() {
     return this.animeForm?.get('trailer');
   }
-  
-  
-  addanime(){
-    const newmovie= this.animeForm.value
-    if(this.animeForm.valid){
-      this.animeservice.addAnimeList(newmovie as unknown as anime ).subscribe(() =>{ 
-        this.router.navigate(["/anime/"])})
-  
-      
+
+  addanime() {
+    const newmovie = this.animeForm.value;
+    if (this.animeForm.valid) {
+      this.animeservice
+        .addAnimeList(newmovie as unknown as anime)
+        .subscribe(() => {
+          this.router.navigate(['/anime/']);
+        });
+
       console.log(newmovie);
     }
   }

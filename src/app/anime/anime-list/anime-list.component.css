@@ -8,3 +8,10 @@
     padding: 20px;
 }
 
+.loader{
+    align-self: center;
+}
+.search-form{
+    display: flex;
+place-content: center;
+}
