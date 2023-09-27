@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsla(0, 27%, 6%, 0.566);
+    /* background-color: hsl(0, 0%, 100%); */
     border: 2px solid hsl(260, 2%, 24%);
     width: 300px;
     padding: 2%;
@@ -17,6 +18,10 @@
     /* border: 3px solid black; */
     border-radius: 5px;
     overflow: hidden;
+    background-image: url("https://rare-gallery.com/uploads/posts/190467-roronoa-zoro-3840x2160.jpg");
+    /* object-fit: cover; */
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   
@@ -27,4 +32,7 @@
     font-weight: 500;
     font-size:2rem;
     padding-bottom: 10px;
+  }
+  .button{
+    color: white;
   }

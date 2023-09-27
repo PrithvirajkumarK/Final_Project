@@ -12,6 +12,9 @@ p{
     display: flex;
     flex-wrap: wrap;
   }
+  .welcome-msg p{
+    display: flex;
+  }
   
   .welcome-msg p{
     text-align: right;

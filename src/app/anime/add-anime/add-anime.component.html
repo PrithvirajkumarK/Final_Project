@@ -1,6 +1,6 @@
 <section class="input-container">
   <form [formGroup]="animeForm" (ngSubmit)="addanime()" class="main-container">
-    <p>Add New Animes</p>
+    <p style="color: white">Add New Animes</p>
     <mat-form-field>
       <mat-label>Movie-Name</mat-label>
       <input matInput formControlName="title" placeholder="Ex. Name" />
@@ -44,15 +44,24 @@
       </mat-error>
     </mat-form-field>
 
-    <h3>Censor Rating</h3>
+    <h3 style="color: white">Censor Rating</h3>
     <mat-radio-group
+      color="warn"
       formControlName="censorRating"
       aria-label="Select an Censor rating"
     >
-      <mat-radio-button value="U">U</mat-radio-button>
-      <mat-radio-button value="U/A">U/A</mat-radio-button>
-      <mat-radio-button value="A">A</mat-radio-button>
-      <mat-radio-button value="R">R</mat-radio-button>
+      <mat-radio-button value="U"
+        ><span class="button">U</span></mat-radio-button
+      >
+      <mat-radio-button value="U/A"
+        ><span class="button">U/A</span></mat-radio-button
+      >
+      <mat-radio-button value="A"
+        ><span class="button">A</span></mat-radio-button
+      >
+      <mat-radio-button value="R"
+        ><span class="button">R</span></mat-radio-button
+      >
     </mat-radio-group>
 
     <mat-form-field>
@@ -108,6 +117,7 @@
     </mat-form-field>
     <button [disabled]="animeForm.invalid" mat-raised-button color="warn">
       <mat-icon
+        style="color: white"
         aria-hidden="false"
         aria-label="Example home icon"
         fontIcon="add"
