@@ -23,7 +23,7 @@ export class AnimePosterComponent {
     this.dcount++;
   }
 
-  show = true;
+  show = false;
   lesssummary() {
     this.show = !this.show;
   }
@@ -37,14 +37,14 @@ export class AnimePosterComponent {
       debounceTime(2000),
       switchMap((count) => {
         this.anime = { ...this.anime, like: count };
-        return this.anime.editAnime(this.anime);
+        return this.animeservice.editAnimeList(this.anime);
       })
     ).subscribe();
     this.DislikeSubject.pipe(
       debounceTime(2000),
       switchMap((count) => {
         this.anime = { ...this.anime, dislike: count };
-        return this.anime.editAnime(this.anime);
+        return this.animeservice.editAnimeList(this.anime);
       })
     ).subscribe();
   }

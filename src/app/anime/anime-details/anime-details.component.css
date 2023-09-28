@@ -1,3 +1,19 @@
 .movie-details i{
     gap: 20px;
 }
+.movie-spec{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.rate{
+    /* display: flex;
+    justify-content: right; */
+    font-weight: 600;
+}
+.details{
+    display: flex;
+    /* justify-content: right; */
+    padding: 10px;
+}

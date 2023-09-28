@@ -16,6 +16,8 @@
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     margin-top: 3rem;
+    margin:  0 auto;
+    transition: all 0.8s;
 }
 
 .movie-poster {
@@ -25,6 +27,9 @@
   object-fit: cover;
 
   /* border-radius: 17px; */
+}
+.movie-container:hover{
+  transform: scale(1.05);
 }
 .movie-spec {
   display: flex;

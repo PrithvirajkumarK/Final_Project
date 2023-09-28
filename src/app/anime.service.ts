@@ -46,9 +46,9 @@ export class AnimeService {
       `https://650ea65d54d18aabfe9955f8.mockapi.io/anime/${id}`
     );
   }
-  searchBookList(name: string) {
+  searchBookList(value: string) {
     return this.http.get<anime[]>(
-      `https://650ea65d54d18aabfe9955f8.mockapi.io/anime?title=${name}`
+      `https://650ea65d54d18aabfe9955f8.mockapi.io/anime?search=${value}`
     );
   }
 }
