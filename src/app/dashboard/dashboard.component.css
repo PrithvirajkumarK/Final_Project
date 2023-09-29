@@ -1,4 +1,4 @@
-p{
+marquee{
     display: flex;
     justify-content: center;
     padding: 20%;
@@ -12,44 +12,6 @@ p{
     display: flex;
     flex-wrap: wrap;
   }
-  .welcome-msg p{
-    display: flex;
-  }
+
   
-  .welcome-msg p{
-    text-align: right;
-  
-    /* animation properties */
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    
-    -moz-animation: my-animation 10s linear infinite;
-    -webkit-animation: my-animation 10s linear infinite;
-    animation: my-animation 10s linear infinite;
-  }
-  
-  /* for Firefox */
-  @-moz-keyframes my-animation {
-    from { -moz-transform: translateX(-100%); }
-    to { -moz-transform: translateX(100%); }
-  }
-  
-  /* for Chrome */
-  @-webkit-keyframes my-animation {
-    from { -webkit-transform: translateX(-100%); }
-    to { -webkit-transform: translateX(100%); }
-  }
-  
-  @keyframes my-animation {
-    from {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-    to {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-  }
+ 
