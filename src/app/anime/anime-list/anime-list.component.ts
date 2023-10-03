@@ -21,6 +21,7 @@ export class AnimeListComponent {
   searchForm = this.fb.group({
     search: '',
   });
+  previousSearches: string[] = [];
 
   constructor(private animeservice: AnimeService, private fb: FormBuilder) {}
 
@@ -54,5 +55,23 @@ export class AnimeListComponent {
 
   ngOnDestroy() {
     this.getanimeList.unsubscribe();
+  }
+
+  show = true;
+  searchIcon() {
+    this.show;
+  }
+
+  clearSearch() {
+    const searchValue = this.searchForm.get('search')?.value;
+
+    if (searchValue) {
+      this.previousSearches.push(searchValue);
+    }
+
+    this.searchForm.get('search')?.setValue('');
+  }
+  clear() {
+    this.search?.reset();
   }
 }
