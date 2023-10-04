@@ -6,11 +6,13 @@
 .toolbar{
     display: flex;
     justify-content: space-between;
- 
+    flex-wrap: wrap;
 }
 
 
 header{
-    position: sticky;
-    top:0px
+    /* position: sticky; */
+    top:0px;
+    padding-bottom: 10px;
+
 }

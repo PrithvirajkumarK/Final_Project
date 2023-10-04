@@ -23,6 +23,14 @@ import { AnimeDetailsComponent } from './anime-details/anime-details.component';
 import { LikeDislikeComponent } from './like-dislike/like-dislike.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import {
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+  MatDialogModule,
+} from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +40,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     EditAnimeComponent,
     AnimeDetailsComponent,
     LikeDislikeComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +60,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatBadgeModule,
     MatSelectModule,
     MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatDialogModule,
   ],
 })
 export class AnimeModule {}

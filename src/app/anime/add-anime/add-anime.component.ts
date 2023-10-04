@@ -13,6 +13,7 @@ import { GENRES, LANGUAGES } from './global';
 export class AddAnimeComponent {
   languages = LANGUAGES;
 
+  progress = 0;
   genres = GENRES;
   animeForm = this.fb.group({
     title: ['', [Validators.required, Validators.minLength(5)]],
@@ -49,6 +50,12 @@ export class AddAnimeComponent {
     this.animeList = animeservice.animeList;
   }
 
+  ngOnInit() {
+    this.animeForm.valueChanges.subscribe(() => {
+      this.updateProgress();
+    });
+  }
+
   get title() {
     return this.animeForm?.get('name');
   }
@@ -65,6 +72,14 @@ export class AddAnimeComponent {
     return this.animeForm?.get('trailer');
   }
 
+  updateProgress() {
+    const allControls = Object.keys(this.animeForm.controls);
+    const validControls = allControls.filter(
+      (key) => this.animeForm.get(key)?.valid
+    );
+
+    this.progress = (validControls.length / allControls.length) * 100;
+  }
   addanime() {
     const newmovie = this.animeForm.value;
     if (this.animeForm.valid) {

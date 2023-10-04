@@ -1,5 +1,11 @@
 <section class="input-container">
   <form [formGroup]="animeForm" (ngSubmit)="addanime()" class="main-container">
+    <mat-progress-bar
+      class="movie-progress"
+      mode="determinate"
+      [value]="progress"
+      color="warn"
+    ></mat-progress-bar>
     <p style="color: white">Add New Animes</p>
     <mat-form-field>
       <mat-label>Movie-Name</mat-label>

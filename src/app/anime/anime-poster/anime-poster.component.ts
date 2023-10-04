@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { AnimeService } from 'src/app/anime.service';
 import { anime } from 'src/app/app.component';
 import { debounceTime, Subject, switchMap } from 'rxjs';
+import { ConfirmDialogComponent } from 'src/app/anime/confirm-dialog/confirm-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-anime-poster',
@@ -32,7 +34,11 @@ export class AnimePosterComponent {
   LikeSubject = new Subject<number>();
   DislikeSubject = new Subject<number>();
 
-  constructor(private router: Router, private animeservice: AnimeService) {
+  constructor(
+    private router: Router,
+    private animeservice: AnimeService,
+    private dialog: MatDialog
+  ) {
     this.LikeSubject.pipe(
       debounceTime(2000),
       switchMap((count) => {
@@ -68,5 +74,29 @@ export class AnimePosterComponent {
 
   updatedisLikecount(count: number) {
     this.DislikeSubject.next(count);
+  }
+
+  openConfirmDialog() {
+    return this.dialog.open(ConfirmDialogComponent, {
+      maxWidth: '450px',
+      data: { message: 'Are you sure you want to delete this anime?' },
+    });
+  }
+
+  deleteMovieDialog() {
+    this.openConfirmDialog()
+      .afterClosed()
+      .subscribe((confirmed: boolean) => {
+        if (confirmed) {
+          this.performDelete();
+        }
+      });
+  }
+
+  performDelete() {
+    this.animeservice.deleteMovieById(this.anime.id).subscribe(() => {
+      console.log('Movie deleted successfully');
+      this.removeMovie.emit();
+    });
   }
 }
