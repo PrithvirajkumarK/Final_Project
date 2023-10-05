@@ -30,6 +30,8 @@ import {
   MatDialogRef,
   MatDialogModule,
 } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
@@ -62,6 +64,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatDialogModule,
+    MatSnackBarModule,
   ],
 })
 export class AnimeModule {}

@@ -12,20 +12,27 @@
   <div class="movie-spec">
     <div class="container">
       <!-- Template binding : In html we are binding the value  -->
-      <h2 class="movie-name">
-        {{ anime?.title }}
-      </h2>
+      <h2 class="movie-name"><b>Title : </b> {{ anime?.title }}</h2>
       <!-- <p>{{ anime.cast?.join(" | ") }}</p> -->
-      <p><i class="fa-solid fa-hashtag"></i> {{ anime.genres?.join(" | ") }}</p>
       <p>
-        <i class="fa-solid fa-language"></i> {{ anime.languages?.join(" | ") }}
+        <b>Genres : </b>
+        <i class="fa-solid fa-hashtag"></i>
+        {{ anime.genres?.join(" | ") }}
+      </p>
+      <p>
+        <b>Languages : </b>
+        <i class="fa-solid fa-language"></i>
+        {{ anime.languages?.join(" | ") }}
       </p>
     </div>
     <div class="rate">
-      <p class="movie-rating">⭐ {{ anime?.rating }}</p>
+      <p class="movie-rating">
+        <i class="fa-solid fa-star" style="color: #ffdd00"></i>
+        {{ anime?.rating }}
+      </p>
     </div>
   </div>
   <div class="details">
-    <p class="movie-summary">{{ anime?.summary }}</p>
+    <p class="movie-summary"><b>Summary : </b>{{ anime?.summary }}</p>
   </div>
 </div>

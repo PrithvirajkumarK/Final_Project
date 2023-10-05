@@ -5,6 +5,7 @@ import { anime } from 'src/app/app.component';
 import { debounceTime, Subject, switchMap } from 'rxjs';
 import { ConfirmDialogComponent } from 'src/app/anime/confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-anime-poster',
@@ -37,7 +38,8 @@ export class AnimePosterComponent {
   constructor(
     private router: Router,
     private animeservice: AnimeService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar
   ) {
     this.LikeSubject.pipe(
       debounceTime(2000),
@@ -89,13 +91,16 @@ export class AnimePosterComponent {
       .subscribe((confirmed: boolean) => {
         if (confirmed) {
           this.performDelete();
+          this.openSnackBar('Close');
         }
       });
+  }
+  openSnackBar(action: string) {
+    this.snackBar.open('Anime deleted Successfully', action);
   }
 
   performDelete() {
     this.animeservice.deleteMovieById(this.anime.id).subscribe(() => {
-      console.log('Movie deleted successfully');
       this.removeMovie.emit();
     });
   }
