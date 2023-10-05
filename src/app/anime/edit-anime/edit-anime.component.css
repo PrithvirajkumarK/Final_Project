@@ -3,20 +3,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(0, 0%, 100%);
-    border: 2px solid hsl(0, 39%, 54%);
+    background-color: hsla(0, 27%, 6%, 0.566);
+    /* background-color: hsl(0, 0%, 100%); */
+    /* border: 2px solid hsl(0, 39%, 54%); */
+    border: 2px solid hsl(260, 2%, 24%);
     width: 300px;
     padding: 2%;
     margin: 0 auto;
     border-radius: 20px;
     margin-top: 5%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    
 }
 .input-container{
-    /* border: 3px solid black; */
     border-radius: 5px;
     overflow: hidden;
+    background-image: url("https://www.pixground.com/wp-content/uploads/2023/08/Moon-River-Japanese-Painting-AI-Generated-4K-Wallpaper.jpg");
+    background-size: cover;
+    margin: 0;
   }
   
 
@@ -24,4 +27,7 @@
     margin-top: 25px;
     font-weight: 500;
     font-size:2rem;
+  }
+  .button{
+    color: white;
   }
