@@ -1,7 +1,9 @@
 .movie-details i{
     gap: 20px;
 }
-
+.movie-details{
+    color: white;
+}
 .movie-spec{
     padding: 10px;
     display: flex;

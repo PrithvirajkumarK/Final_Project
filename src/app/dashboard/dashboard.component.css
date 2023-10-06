@@ -6,12 +6,138 @@ marquee{
     font-weight: 500;
   }
 .welcome-msg {
-    /* border: 3px solid black; */
     border-radius: 5px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
   }
 
-  
- 
+   .wellcome{
+    display: flex;
+    justify-content: center;
+    transform: translateY(230px);
+    }
+ .title{
+  display: flex;
+  color: rgb(219, 4, 4);
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+ }
+ h1{
+  font-size: 50px;
+  letter-spacing: 10px;
+  font-family: sans-serif;
+ }
+ .title1{
+  color: hsla(0, 0%, 0%, 0.685);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+ }
+ .msg{
+  background-color: hsl(0, 0%, 0%);
+  height: 50%;
+  width: 50%;
+ }
+ .final{
+  display: flex;
+  gap: 25px;
+ }
+ .back{
+  background-color: red;
+  margin-left: 50%;
+  height: 50%;
+  width: 50%;
+ }
+
+ .clr{
+
+  z-index: -1;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+ }
+ body{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 20%, rgba(255,0,0,1) 79%);
+    
+ }
+ .click{
+  /* color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(250px);
+  border: none;
+  font-weight: 700;
+  gap: 15px;
+ }
+ button{
+  background-color: red;
+  font-size: 1.1rem;
+  border: none;
+  height: 30px;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: 0.8s all;
+ }
+ button:hover{
+  background-color: white;
+  transform: scale(1.1);
+ }
+
+ i{
+  font-size: 30px;
+ }
+
+
+ .btn41-43 {
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-41 {
+  border: 2px solid rgb(0, 0, 0);
+  z-index: 1;
+  color: black;
+}
+
+.btn-41:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+.btn-41:hover {
+  border: none;
+  color: rgb(255, 0, 0);
+}
+
+.btn-41:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-41:active {
+  top: 2px;
+}

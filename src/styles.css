@@ -2,8 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    /* font-family: Roboto, "Helvetica Neue", sans-serif;  */
     background-color: whitesmoke;
     /* background-image: url("https://www.pixground.com/wp-content/uploads/2023/08/Moonlight-Japanese-Painting-AI-Generated-4K-Wallpaper-jpg.webp"); */
     /* background-size: cover; */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 20%, rgba(255,0,0,1) 79%);
+      
  }

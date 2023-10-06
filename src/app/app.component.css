@@ -1,15 +1,15 @@
 .tool{
     display: flex;
-    /* gap: 10px; */
+    gap: 5px;
     align-items: center;
 }
 .toolbar{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: hsla(0, 0%, 0%, 0.89);
+    color: white;
 }
-
-
 header{
     top:0px;
     /* padding-bottom: 10px; */
