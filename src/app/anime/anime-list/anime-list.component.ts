@@ -26,40 +26,39 @@ export class AnimeListComponent {
   constructor(private animeservice: AnimeService, private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.search?.valueChanges
-
-      .pipe(
-        debounceTime(1500),
-
-        distinctUntilChanged(),
-
-        switchMap((name) => this.animeservice.searchBookList(name || ''))
-      )
-
-      .subscribe((mvList) => {
-        this.animeList = mvList;
-      });
+    this.loadData();
     this.loadAnimeData();
   }
   get search() {
     return this.searchForm.get('search');
   }
+  loadData() {
+    this.isLoading = true;
+    this.getanimeList = this.animeservice
+      .getanimeList()
+      .subscribe((Anime: any) => {
+        this.animeList = Anime;
+        this.isLoading = false;
+      });
+  }
 
   loadAnimeData() {
-    this.isLoading = true;
-    this.getanimeList = this.animeservice.getanimeList().subscribe((Anime) => {
-      this.animeList = Anime;
-      this.isLoading = false;
-    });
+    // this.isLoading = true;
+    this.getanimeList = this.animeservice.currentAnimeList.subscribe(
+      (Anime: any) => {
+        this.animeList = Anime;
+        // this.isLoading = false;
+      }
+    );
   }
 
   ngOnDestroy() {
     this.getanimeList.unsubscribe();
   }
 
-  show = true;
+  show = false;
   searchIcon() {
-    this.show;
+    this.show = !this.show;
   }
 
   clearSearch() {

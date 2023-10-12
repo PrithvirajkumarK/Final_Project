@@ -4,8 +4,8 @@
     alt=""
   />
 </div> -->
-<form [formGroup]="searchForm" class="search-form">
-  <mat-form-field class="example-full-width">
+<!-- <form [formGroup]="searchForm" class="search-form"> -->
+<!-- <mat-form-field class="example-full-width">
     <mat-label>Search Anime</mat-label>
     <mat-icon matPrefix>search</mat-icon>
     <input formControlName="search" type="text" matInput list="animeData" />
@@ -16,15 +16,27 @@
         [value]="an.title"
       ></option>
     </datalist>
-  </mat-form-field>
-  <!-- <button
-    *ngIf="show"
-    class="search-button"
-    mat-icon-button
-    matTooltip="Basic"
-    aria-label="Example icon-button with a heart icon"
-  ></button> -->
-  <button
+  </mat-form-field> -->
+<!-- <div class="search-main">
+    <input
+      formControlName="search"
+      class="search"
+      type="text"
+      matInput
+      list="animeData"
+      placeholder="Search-Anime"
+    />
+    <mat-icon class="search-icon" *ngIf="!search">search</mat-icon>
+    <mat-icon class="close" *ngIf="search" (click)="clear()">close</mat-icon>
+  </div>
+  <datalist id="animeData">
+    <option
+      class="option"
+      *ngFor="let an of animeList"
+      [value]="an.title"
+    ></option>
+  </datalist> -->
+<!-- <button
     matSuffix
     mat-icon-button
     *ngIf="
@@ -35,8 +47,9 @@
     aria-label="Example icon-button with a heart icon"
   >
     <mat-icon>close</mat-icon>
-  </button>
-</form>
+  </button> -->
+<app-search></app-search>
+<!-- </form> -->
 <section class="movie-containers">
   <mat-spinner *ngIf="isLoading" class="loader"></mat-spinner>
   <app-anime-poster

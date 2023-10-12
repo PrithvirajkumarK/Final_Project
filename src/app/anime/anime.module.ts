@@ -33,6 +33,7 @@ import {
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { SearchAnimeModule } from '../search-anime/search-anime.module';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatProgressBarModule,
     MatDialogModule,
     MatSnackBarModule,
+    SearchAnimeModule,
   ],
 })
 export class AnimeModule {}

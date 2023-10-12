@@ -1,0 +1,20 @@
+<form [formGroup]="searchForm" class="search-form">
+  <div class="search-main">
+    <input
+      formControlName="search"
+      class="search"
+      type="search"
+      matInput
+      list="animeData"
+      placeholder="Search-Anime"
+    />
+  </div>
+
+  <datalist id="animeData">
+    <option
+      class="option"
+      *ngFor="let an of animeList"
+      [value]="an.title"
+    ></option>
+  </datalist>
+</form>
